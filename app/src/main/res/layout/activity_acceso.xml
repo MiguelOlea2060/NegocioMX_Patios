@@ -22,12 +22,13 @@
 
         <!-- Logo de la empresa -->
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="120dp"
-            android:src="@drawable/logo_transvision"
-            android:scaleType="fitCenter"
-            android:layout_marginBottom="12dp"
-            android:contentDescription="Transvision" />
+            android:id="@+id/imageView"
+            android:layout_width="280dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_automoviles1" />
 
         <!-- Título de bienvenida -->
         <TextView
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="______________________________"
             android:textSize="20sp"
-            android:textColor="#E3F2FD"
+            android:textColor="@color/primary_auto_light"
             android:layout_marginBottom="6dp" />
 
         <!-- Card contenedor del formulario -->
@@ -69,7 +70,7 @@
                     android:text="Iniciar Sesión"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="#1565C0"
+                    android:textColor="@color/primary_auto"
                     android:layout_gravity="center"
                     android:layout_marginBottom="26dp" />
 
@@ -78,8 +79,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:boxStrokeColor="#1565C0"
-                    app:hintTextColor="#1565C0"
+                    app:boxStrokeColor="@color/primary_auto"
+                    app:hintTextColor="@color/primary_auto"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -92,7 +93,7 @@
                         android:textColor="#333333"
                         android:padding="16dp"
                         android:drawableLeft="@android:drawable/ic_dialog_email"
-                        android:drawableTint="#1565C0"
+                        android:drawableTint="@color/primary_auto"
                         android:drawablePadding="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -102,10 +103,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    app:boxStrokeColor="#1565C0"
-                    app:hintTextColor="#1565C0"
+                    app:boxStrokeColor="@color/primary_auto"
+                    app:hintTextColor="@color/primary_auto"
                     app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="#1565C0"
+                    app:passwordToggleTint="@color/primary_auto"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -115,10 +116,10 @@
                         android:hint="Contraseña"
                         android:inputType="textPassword"
                         android:textSize="16sp"
-                        android:textColor="#333333"
+                        android:textColor="@color/accent_auto"
                         android:padding="16dp"
                         android:drawableLeft="@android:drawable/ic_lock_idle_lock"
-                        android:drawableTint="#1565C0"
+                        android:drawableTint="@color/primary_auto"
                         android:drawablePadding="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -131,7 +132,7 @@
                     android:text="Recordar mis credenciales"
                     android:textSize="14sp"
                     android:textColor="#666666"
-                    android:buttonTint="#1565C0"
+                    android:buttonTint="@color/primary_auto"
                     android:layout_marginBottom="28dp"
                     android:padding="8dp" />
 
@@ -166,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:text="¿No tienes cuenta? Regístrate aquí"
                     android:textSize="14sp"
-                    android:textColor="#FF9800"
+                    android:textColor="@color/accent_auto"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:clickable="true"
@@ -174,7 +175,7 @@
                     android:padding="12dp"
                     android:background="?android:attr/selectableItemBackground"
                     android:drawableLeft="@android:drawable/ic_menu_add"
-                    android:drawableTint="#FF9800"
+                    android:drawableTint="@color/accent_auto"
                     android:drawablePadding="8dp" />
 
             </LinearLayout>
@@ -199,7 +200,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transvision International"
+                android:text="AutoLogística Terrestre"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
@@ -208,9 +209,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transporte Marítimo y Aéreo Internacional"
+                android:text="Almacenamiento y Movimiento de Automóviles"
                 android:textSize="12sp"
-                android:textColor="#E3F2FD" />
+                android:textColor="@color/primary_auto_light" />
 
         </LinearLayout>
 

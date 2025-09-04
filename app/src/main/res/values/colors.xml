@@ -10,4 +10,11 @@
     <color name="blue_normal_deep">#62daff</color>
     <color name="naranja">#FFA500</color>
     <color name="naranja_ligero">#FFC82F</color>
+
+
+    <!-- En values/colors.xml -->
+    <color name="primary_auto">#D32F2F</color>        <!-- Rojo que ya usas -->
+    <color name="background_auto">#B71C1C</color>     <!-- Rojo más oscuro para gradiente -->
+    <color name="primary_auto_light">#FFCDD2</color>  <!-- Rojo claro -->
+    <color name="accent_auto">#FF5722</color>         <!-- Naranja -->
 </resources>

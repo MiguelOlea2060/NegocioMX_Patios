@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.negociomx_pos"
+    namespace = "com.example.negociomx_patios"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.negociomx_pos"
+        applicationId = "com.example.negociomx_patios"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
