@@ -79,7 +79,6 @@ class Paso1Vin_Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         configurarEventos()
-
     }
 
 
