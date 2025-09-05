@@ -16,10 +16,11 @@ object ConexionSQLServer {
 
     //Servidor Nube
     private const val SERVER = "P3NWPLSK12SQL-v13.shr.prod.phx3.secureserver.net"
-    private const val DATABASE = "neg0c10mx_byd"
-    private const val USERNAME = "sanegoc10MX"
-    private const val PASSWORD = "NITr2025MX.#MXL1c"
+    private const val DATABASE = "NegocioMX_Concentradora"
+    private const val USERNAME = "NegocioMX_Concentradora"
+    private const val PASSWORD = "NITr11ziu7#"
     private const val PORT = "1433"
+
 
     fun obtenerConexion(): Connection? {
         return try {

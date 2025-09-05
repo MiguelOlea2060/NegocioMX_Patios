@@ -131,7 +131,7 @@ class acceso_activity : AppCompatActivity() {
                             ParametrosSistema.usuarioLogueado.IdRol="5"
 
                             mainHandler.post {
-                                val intent = Intent(applicationContext, menu_principal_activity::class.java)
+                                val intent = Intent(applicationContext, Paso1Vin_Activity::class.java)
                                 startForResult.launch(intent)
                                 resetLoginUI()
                             }

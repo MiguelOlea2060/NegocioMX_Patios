@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+    <!-- Paso1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:padding="3dp"
+            android:background="@color/naranja_ligero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paso 1 - Consulta VIN"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Sección VIN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚗 Escanea el Codigo QR"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_auto"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:maxLength="19"
+                    android:id="@+id/etVIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:hint="Ingrese VIN del vehículo"
+                    android:background="@drawable/edittext_background"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:layout_weight="2"
+                    android:id="@+id/btnConsultarVehiculo"
+                    android:layout_width="85dp"
+                    android:layout_height="48dp"
+                    android:text="🔍 Buscar"
+                    android:backgroundTint="@color/primary_auto"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Información del Vehículo -->
+        <LinearLayout
+            android:id="@+id/layoutInfoVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/info_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Datos del Vehículo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_auto"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tv_bl_vehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MBL: -"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:id="@+id/tv_marca_modelo_annio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marca y Modelo: -"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_color_exterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color Ext: -"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvColorInterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color Int.: -"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvTipoCombustible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Combustible: -"
+                android:textSize="16sp"
+                android:textColor="#424242" />
+
+            <TextView
+                android:id="@+id/tvTipoVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo vehiculo: -"
+                android:textSize="16sp"
+                android:textColor="#424242" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/loadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                style="?android:attr/progressBarStyleLarge"
+                android:indeterminateTint="@color/primary_auto" />
+
+            <TextView
+                android:id="@+id/tvLoadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Preparando datos..."
+                android:textSize="16sp"
+                android:textColor="@color/primary_auto" />
+
+            <TextView
+                android:id="@+id/tvLoadingSubtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Esto puede tomar unos momentos"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnIrAFotos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📸 IR A FOTOS"
+            android:backgroundTint="@color/primary_auto"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
