@@ -22,6 +22,7 @@ object ConexionSQLServer {
     private const val PORT = "1433"
 
 
+
     fun obtenerConexion(): Connection? {
         return try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver")

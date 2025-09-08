@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:padding="8dp"
+            android:background="@color/naranja_ligero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paso 2 - Evidencias Fotográficas"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_auto"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Info del Vehículo -->
+        <TextView
+            android:id="@+id/tvInfoVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehículo: Cargando..."
+            android:textSize="16sp"
+            android:textColor="#424242"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Grid de Fotos 2x3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Fila 1: Frontal y Trasera -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Foto 1: Frontal -->
+                <LinearLayout
+                    android:id="@+id/layoutFoto1"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoto1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_frontal"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vista Frontal"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_auto"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Foto 2: Trasera -->
+                <LinearLayout
+                    android:id="@+id/layoutFoto2"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="8dp"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoto2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_trasera"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vista Trasera"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_auto"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Fila 2: Laterales -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Foto 3: Lateral Izquierdo -->
+                <LinearLayout
+                    android:id="@+id/layoutFoto3"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoto3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_lateral_izq"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lateral Izquierdo"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_auto"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Foto 4: Lateral Derecho -->
+                <LinearLayout
+                    android:id="@+id/layoutFoto4"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="8dp"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoto4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_lateral_der"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lateral Derecho"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_auto"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Fila 3: Superior (centrada) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <!-- Foto 5: Superior -->
+                <LinearLayout
+                    android:id="@+id/layoutFoto5"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoto5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/placeholder_superior"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vista Superior"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_auto"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="⬅️ VOLVER"
+                android:backgroundTint="#757575"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="💾 GUARDAR"
+                android:backgroundTint="@color/primary_auto"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,6 +1,7 @@
 package com.example.negociomx_patios
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -224,9 +225,12 @@ class Paso1Vin_Activity : AppCompatActivity() {
             return
         }
 
-
-        Toast.makeText(this, "Navegando a sección de fotos...", Toast.LENGTH_SHORT).show()
-        limpiarFormulario()
+        // <CHANGE> Navegar a Paso2Fotos_Activity pasando el VIN y IdVehiculo
+        val intent = Intent(this, Paso2Fotos_Activity::class.java)
+        intent.putExtra("VIN", vehiculo.VIN)
+        intent.putExtra("IdVehiculo", vehiculo.Id)
+        intent.putExtra("MarcaModelo", "${vehiculo.Marca} - ${vehiculo.Modelo}")
+        startActivity(intent)
     }
 
 
